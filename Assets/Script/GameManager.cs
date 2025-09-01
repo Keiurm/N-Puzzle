@@ -8,7 +8,7 @@ public class GameManeger : MonoBehaviour
     [SerializeField] StageManager stageManager;
     PlayerManager playerManager;
     // Start is called before the first frame update
-    enum DIRECTION
+    public enum DIRECTION
     {
         UP,
         DOWN,
@@ -73,13 +73,12 @@ public class GameManeger : MonoBehaviour
         else if (stageManager.IsBlock(nextPlayerPosition))
         {
             Vector2Int nextBlockPosition = GetNextPosition(nextPlayerPosition, direction);
-            stageManager.UpdateObjectPosition(nextPlayerPosition, nextBlockPosition,
-            StageManager.STAGE_TYPE.BLOCK);
+            stageManager.UpdateObjectPosition(nextPlayerPosition, nextBlockPosition, StageManager.STAGE_TYPE.BLOCK);
         }
         stageManager.UpdateStageTableForPlayer(currentPlayerPosition, nextPlayerPosition);
         playerManager.Move(stageManager.GetScreenPositionFromTileTable(nextPlayerPosition));
-        stageManager.SetObjPositionOnStage(playerManager.gameObject, nextPlayerPosition);
-    }  
+        stageManager.SetObjectOnStage(playerManager.gameObject, nextPlayerPosition);
+    }
     Vector2Int GetNextPosition(Vector2Int currentPosition, DIRECTION direction)
     {
         switch (direction)
@@ -88,7 +87,7 @@ public class GameManeger : MonoBehaviour
                 return currentPosition - Vector2Int.up;
                 break;
             case DIRECTION.DOWN:
-                return currentPosition + Vector2Int.down;
+                return currentPosition - Vector2Int.down;
                 break;
             case DIRECTION.LEFT:
                 return currentPosition + Vector2Int.left;

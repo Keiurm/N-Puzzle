@@ -129,7 +129,7 @@ public class StageManager : MonoBehaviour
         }
         return null;
     }
-    public void UpdateObjectPosition(Vector2Int nowPosition, Vector2Int nextPosition,STAGE_TYPE stageType)
+    public void UpdateObjectPosition(Vector2Int nowPosition, Vector2Int nextPosition, STAGE_TYPE stageType)
     {
         GameObject targetBlock = GetObjectByPosition(nowPosition);
         targetBlock.transform.position = GetScreenPositionFromTileTable(nextPosition);

@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -132,7 +131,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 276885008}
-  - component: {fileID: 276885007}
+  - component: {fileID: 276885009}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -140,19 +139,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &276885007
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 276885006}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9070df2d12e10834eb185036854ed941, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stageManager: {fileID: 367795558}
 --- !u!4 &276885008
 Transform:
   m_ObjectHideFlags: 0
@@ -168,6 +154,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &276885009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 276885006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78c97b10f1d7e4b079d5e8cf4fdc0bb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stageManager: {fileID: 367795558}
 --- !u!1 &367795557
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,7 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9f985506dda67f4287fa17c245288f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageAsset: {fileID: 4900000, guid: 4486832f7e8ff9e41b91bc996aa557ed, type: 3}
+  stageFile: {fileID: 4900000, guid: 3ca27687de4d24f2f99603d8982d7f29, type: 3}
   prefabs:
   - {fileID: 3553731954517298065, guid: 4e1a3cb00f016fc44af7779be203317e, type: 3}
   - {fileID: 6663570884914599380, guid: 5db1c8e7b1962bc428153f71cc984166, type: 3}
