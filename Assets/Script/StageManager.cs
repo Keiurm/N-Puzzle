@@ -5,7 +5,7 @@ using UnityEngine.UIElements;
 
 public class StageManager : MonoBehaviour
 {
-    [SerializeField] TextAsset stageAsset;
+    [SerializeField] TextAsset stageFile;
     [SerializeField] GameObject[] prefabs;
 
     public enum STAGE_TYPE
@@ -27,7 +27,7 @@ public class StageManager : MonoBehaviour
 
     public void LoadStageData()
     {
-        string[] lines = stageAsset.text.Split(new[] { '\n', '\r' });
+        string[] lines = stageFile.text.Split(new[] { '\n', '\r' });
         int rows = lines.Length;
         int colums = lines[0].Split(new[] { ',' }).Length;
         stageTable = new STAGE_TYPE[rows, colums];

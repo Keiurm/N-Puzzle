@@ -28,34 +28,38 @@ public class GameManeger : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             Debug.Log("上矢印が押されました。");
-            Vector2Int currentPlayerPosition = stageManager.GetObjPosition(playerManager.gameObject);
-            Vector2Int nextPlayerPosition = currentPlayerPosition - Vector2Int.up;
-            playerManager.Move(stageManager.GetScreenPositionFromTileTable(nextPlayerPosition));
-            stageManager.SetObjectOnStage(playerManager.gameObject, nextPlayerPosition);
+            // Vector2Int currentPlayerPosition = stageManager.GetObjPosition(playerManager.gameObject);
+            // Vector2Int nextPlayerPosition = currentPlayerPosition - Vector2Int.up;
+            // playerManager.Move(stageManager.GetScreenPositionFromTileTable(nextPlayerPosition));
+            // stageManager.SetObjectOnStage(playerManager.gameObject, nextPlayerPosition);
+            MoveToNextPosition(DIRECTION.UP);
         }
         else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             Debug.Log("下矢印が押されました。");
-            Vector2Int currentPlayerPosition = stageManager.GetObjPosition(playerManager.gameObject);
-            Vector2Int nextPlayerPosition = currentPlayerPosition - Vector2Int.down;
-            playerManager.Move(stageManager.GetScreenPositionFromTileTable(nextPlayerPosition));
-            stageManager.SetObjectOnStage(playerManager.gameObject, nextPlayerPosition);
+            // Vector2Int currentPlayerPosition = stageManager.GetObjPosition(playerManager.gameObject);
+            // Vector2Int nextPlayerPosition = currentPlayerPosition - Vector2Int.down;
+            // playerManager.Move(stageManager.GetScreenPositionFromTileTable(nextPlayerPosition));
+            // stageManager.SetObjectOnStage(playerManager.gameObject, nextPlayerPosition);
+            MoveToNextPosition(DIRECTION.DOWN);
         }
         else if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             Debug.Log("左矢印が押されました。");
-            Vector2Int currentPlayerPosition = stageManager.GetObjPosition(playerManager.gameObject);
-            Vector2Int nextPlayerPosition = currentPlayerPosition + Vector2Int.left;
-            playerManager.Move(stageManager.GetScreenPositionFromTileTable(nextPlayerPosition));
-            stageManager.SetObjectOnStage(playerManager.gameObject, nextPlayerPosition);
+            // Vector2Int currentPlayerPosition = stageManager.GetObjPosition(playerManager.gameObject);
+            // Vector2Int nextPlayerPosition = currentPlayerPosition + Vector2Int.left;
+            // playerManager.Move(stageManager.GetScreenPositionFromTileTable(nextPlayerPosition));
+            // stageManager.SetObjectOnStage(playerManager.gameObject, nextPlayerPosition);
+            MoveToNextPosition(DIRECTION.LEFT);
         }
         else if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             Debug.Log("右矢印が押されました。");
-            Vector2Int currentPlayerPosition = stageManager.GetObjPosition(playerManager.gameObject);
-            Vector2Int nextPlayerPosition = currentPlayerPosition + Vector2Int.right;
-            playerManager.Move(stageManager.GetScreenPositionFromTileTable(nextPlayerPosition));
-            stageManager.SetObjectOnStage(playerManager.gameObject, nextPlayerPosition);
+            // Vector2Int currentPlayerPosition = stageManager.GetObjPosition(playerManager.gameObject);
+            // Vector2Int nextPlayerPosition = currentPlayerPosition + Vector2Int.right;
+            // playerManager.Move(stageManager.GetScreenPositionFromTileTable(nextPlayerPosition));
+            // stageManager.SetObjectOnStage(playerManager.gameObject, nextPlayerPosition);
+            MoveToNextPosition(DIRECTION.RIGHT);
         }
     }
     void MoveToNextPosition(DIRECTION direction)
