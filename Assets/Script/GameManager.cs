@@ -73,6 +73,12 @@ public class GameManeger : MonoBehaviour
         else if (stageManager.IsBlock(nextPlayerPosition))
         {
             Vector2Int nextBlockPosition = GetNextPosition(nextPlayerPosition, direction);
+
+            if (stageManager.IsWall(nextBlockPosition) || stageManager.IsBlock(nextBlockPosition))
+            {
+                return;
+            }
+
             stageManager.UpdateObjectPosition(nextPlayerPosition, nextBlockPosition, StageManager.STAGE_TYPE.BLOCK);
         }
         stageManager.UpdateStageTableForPlayer(currentPlayerPosition, nextPlayerPosition);
